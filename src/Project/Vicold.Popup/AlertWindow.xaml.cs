@@ -6,7 +6,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 
-namespace Vicold.Popup
+namespace Vicold.UI.Popup
 {
     /// <summary>
     /// AlertWindow.xaml 的交互逻辑

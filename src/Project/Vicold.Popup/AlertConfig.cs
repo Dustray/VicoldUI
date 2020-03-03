@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vicold.Popup
+namespace Vicold.UI.Popup
 {
     /// <summary>
     /// 

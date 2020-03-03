@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vicold.Popup", "Vicold.Popup\Vicold.Popup.csproj", "{D01E55FF-53F6-413D-BF23-359D2879ABFA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vicold.UI.Popup", "Vicold.Popup\Vicold.UI.Popup.csproj", "{D01E55FF-53F6-413D-BF23-359D2879ABFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vicold.UI.Shell", "Vicold.UI.Shell\Vicold.UI.Shell.csproj", "{4E3DBD70-69A5-40B0-AAF0-86E7D836130E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D01E55FF-53F6-413D-BF23-359D2879ABFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D01E55FF-53F6-413D-BF23-359D2879ABFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D01E55FF-53F6-413D-BF23-359D2879ABFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E3DBD70-69A5-40B0-AAF0-86E7D836130E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E3DBD70-69A5-40B0-AAF0-86E7D836130E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E3DBD70-69A5-40B0-AAF0-86E7D836130E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E3DBD70-69A5-40B0-AAF0-86E7D836130E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

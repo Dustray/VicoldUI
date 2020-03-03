@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Threading;
 
-namespace Vicold.Popup
+namespace Vicold.UI.Popup
 {
     public static class Alert
     {

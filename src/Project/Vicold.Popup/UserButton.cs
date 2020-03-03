@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace Vicold.Popup
+namespace Vicold.UI.Popup
 {
     /// <summary>
     /// 用户按钮
