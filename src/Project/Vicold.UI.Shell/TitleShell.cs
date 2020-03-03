@@ -19,7 +19,8 @@ namespace Vicold.UI.Shell
         /// </summary>
         public TitleShell()
         {
-            Application.LoadComponent(new ResourceDictionary(), new Uri(@"/Vicold.UI.Shell;component/Styles/ToolBarButton.xaml", UriKind.Relative));
+
+            var s = (ResourceDictionary)Application.LoadComponent(new Uri(@"/Vicold.UI.Shell;component/Styles/ToolBarButton.xaml", UriKind.Relative));
 
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
             ResizeMode = ResizeMode.NoResize;
@@ -38,7 +39,8 @@ namespace Vicold.UI.Shell
             tbTitle.Text = "标题";
             grid.Children.Add(tbTitle);
             var btnClose = new Button();
-            btnClose.Style=Resources["ToolBarBtnStyle"] as Style;//.SetValue(StyleProperty, Application.Current.Resources["ToolBarBtnStyle"]);//.Style = (Style)this.FindResource("ToolBarBtnStyle");
+            btnClose.Resources.MergedDictionaries.Add(s);
+            //btnClose.Style=Resources["ToolBarBtnStyle"] as Style;//.SetValue(StyleProperty, Application.Current.Resources["ToolBarBtnStyle"]);//.Style = (Style)this.FindResource("ToolBarBtnStyle");
             btnClose.Content = ((char)0xEF2C).ToString();
             btnClose.ToolTip = "关闭";
             btnClose.Margin = new Thickness(0, 0, 10, 0);
