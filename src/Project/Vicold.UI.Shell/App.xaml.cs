@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Vicold.UI.Shell
+namespace Vicold.UI.View
 {
     /// <summary>
     /// App.xaml 的交互逻辑

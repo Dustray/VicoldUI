@@ -7,8 +7,8 @@
     <ProjectGuid>{4E3DBD70-69A5-40B0-AAF0-86E7D836130E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Vicold.UI.Shell</RootNamespace>
-    <AssemblyName>Vicold.UI.Shell</AssemblyName>
+    <RootNamespace>Vicold.UI.View</RootNamespace>
+    <AssemblyName>Vicold.UI.View</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -24,12 +24,12 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\Bin\Vicold.UI.Shell.xml</DocumentationFile>
+    <DocumentationFile>..\Bin\Vicold.UI.View.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\..\dist\Vicold.UI.Shell\</OutputPath>
+    <OutputPath>..\..\..\dist\Vicold.UI.View\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -59,7 +59,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="TitleShell.cs" />
+    <Compile Include="ShellTheme\NoBorderTheme.cs" />
+    <Compile Include="ShellTheme\TransparentTheme.cs" />
+    <Compile Include="Shell\NoBorderShell.cs" />
+    <Compile Include="Shell\NoBorderTransparentShell.cs" />
+    <Compile Include="View\TitleBarView.xaml.cs">
+      <DependentUpon>TitleBarView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Include="App.xaml">
@@ -81,6 +87,10 @@
     <Page Include="Styles\ToolBarButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\TitleBarView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
