@@ -19,15 +19,24 @@ namespace Vicold.UI.Shell
         /// </summary>
         public TitleShell()
         {
+            
 
-            var s = (ResourceDictionary)Application.LoadComponent(new Uri(@"/Vicold.UI.Shell;component/Styles/ToolBarButton.xaml", UriKind.Relative));
-
+            
+            
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public void abc()
+        {
+            var s = (ResourceDictionary)App.LoadComponent(new Uri(@"/Vicold.UI.Shell;component/Styles/ToolBarButton.xaml", UriKind.Relative));
+            this.Resources.MergedDictionaries.Add(s);
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
             ResizeMode = ResizeMode.NoResize;
             WindowStyle = WindowStyle.None;
             Background = new SolidColorBrush(Color.FromArgb(255, 230, 230, 230));
             var grid = new Grid();
-            grid.Background = new SolidColorBrush(Color.FromArgb(60, 255, 0, 0));
+            grid.Background = new SolidColorBrush(Color.FromArgb(60, 255, 255, 255));
             grid.Height = 50;
             grid.VerticalAlignment = VerticalAlignment.Top;
             grid.MouseLeftButtonDown += (sender, e) => { DragMove(); };
@@ -39,15 +48,14 @@ namespace Vicold.UI.Shell
             tbTitle.Text = "标题";
             grid.Children.Add(tbTitle);
             var btnClose = new Button();
-            btnClose.Resources.MergedDictionaries.Add(s);
-            //btnClose.Style=Resources["ToolBarBtnStyle"] as Style;//.SetValue(StyleProperty, Application.Current.Resources["ToolBarBtnStyle"]);//.Style = (Style)this.FindResource("ToolBarBtnStyle");
+            btnClose.Style =  (Style)this.FindResource("ToolBarBtnStyle");
+            btnClose.HorizontalAlignment = HorizontalAlignment.Right;
             btnClose.Content = ((char)0xEF2C).ToString();
             btnClose.ToolTip = "关闭";
             btnClose.Margin = new Thickness(0, 0, 10, 0);
             btnClose.Click += (sender, e) => { Close(); };
             grid.Children.Add(btnClose);
             AddChild(grid);
-            
         }
     }
 }
